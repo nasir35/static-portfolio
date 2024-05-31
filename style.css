@@ -340,3 +340,64 @@ h2{
     padding-bottom: 20px;
     border-bottom : 1px solid rgba(255, 255, 255, 0.2);
 }
+
+
+/* award section  */
+#awards-section {
+    width: 100vw;
+    padding: 70px 0px;
+    background: var(--primaryColor);
+}
+
+#awards-section .container {
+    display: flex;
+    flex-direction: column;
+    max-width: var(--maxWidth);
+    margin: 0 auto;
+    text-align: center;
+}
+
+#awards-section .section-header {
+    max-width: 540px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+}
+#awards-section .description {
+    font-size: var(--pSize);
+}
+
+#awards-section .awards-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+#awards-section .award-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background: #000000;
+    border-radius: 10px;
+}
+
+#awards-section .award-content {
+    max-width: 70%;
+    text-align: left;
+}
+
+#awards-section .award-title {
+    font-weight: 400;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+#awards-section .description {
+    line-height: 1.7rem;
+}
+
+#awards-section .award-category {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--textColor);
+    text-align: right;
+}

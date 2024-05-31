@@ -35,6 +35,14 @@
     #banner-section .container .skills span {
         font-size: 16px;
     }
+    #experience-section{
+        margin: 0;
+        padding: 70px 20px;
+    }
+    #awards-section{
+        margin: 0;
+        padding: 60px 20px;
+    }
 }
 
 @media only screen and (max-width: 767px) {
@@ -162,9 +170,10 @@
 
     #experience-section{
         margin: 0;
-        padding: 60px 12px;
+        padding: 60px 0;
     }
     #experience-section .container {
+        padding: 0 12px;
         flex-direction: column;
         align-items: center;
     }
@@ -177,4 +186,29 @@
         gap: 30px;
     }
 
+
+    #awards-section {
+        margin: 0;
+        padding: 50px 0;
+    }
+    #awards-section .container {
+        padding: 0 12px;
+    }
+    #awards-section .award-content {
+            max-width: 100%;
+            text-align: left;
+        }
+    #awards-section .awards-list {
+        gap: 20px;
+    }
+
+    #awards-section .award-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #awards-section .award-category {
+        margin-top: 10px;
+        text-align: left;
+        }
 }
