@@ -32,34 +32,43 @@ a {
 }
 
 #nav-section {
+    max-width: 100vw;   
+    position: sticky;
+    top: 0;
+    background: var(--primaryColor);
+    z-index: 10;
+}
+#nav-section .nav-wrapper{
+    max-width: var(--maxWidth);
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 8px 0;
+    padding: 16px 0;
 }
 
-#nav-section .logo{
+#nav-section .nav-wrapper .logo{
     font-size: 28px;
     font-weight: 700;
     color: var(--tertiaryColor);
 
 }
-#nav-section .logo-container .cv-btn{
+#nav-section .nav-wrapper .logo-container .cv-btn{
     display: none;
 }
-#nav-section ul {
+#nav-section .nav-wrapper ul {
     display: flex;
     align-items: center;
     gap: 12px;
 }
 
-#nav-section ul li {
+#nav-section .nav-wrapper ul li {
     padding: 10px 14px;
     font-weight: 400;
     font-size: var(--pSize);
     list-style-type: none;
 }
-#nav-section ul li:last-child {
+#nav-section .nav-wrapper ul li:last-child {
     padding: 14px 26px;
     background: var(--tertiaryColor);
     border-radius: 6px;
@@ -70,7 +79,7 @@ a {
     max-width: 100vw;
     padding: 40px 0;
     position: relative;
-    overflow-x: hidden;
+    overflow: hidden;
     padding-bottom: 80px;
 }
 .container{
@@ -173,36 +182,16 @@ a {
     width: 100%;
     border-radius: 50%;
 }
-
-.bottom-scroll {
-    background-color: #333;
-    padding: 10px 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-    white-space: nowrap;
-    overflow-x: auto;
-}
-
-.bottom-scroll span {
-    margin: 0 15px;
-    color: white;
-}
-
-.bottom-scroll span:not(:last-child)::after {
-    content: " ★ ";
-    color: #ff6f00;
-}
 .marquee-wrapper {
     background: #000000;
     position: absolute;
-    bottom: 0;
+    bottom: 60px;
     left: 0;
     padding: 30px 10px;
-    overflow: hidden;
+    overflow-x: hidden;
     width: 100vw;
     transform: rotate(-4deg);
+    z-index: 5;
 }
 
 .marquee-container {
@@ -213,6 +202,7 @@ a {
 
 .marquee-content {
     display: flex;
+    align-items: center;
     gap: 20px;
 }
 
@@ -242,25 +232,73 @@ a {
 }
 
 
+/* about me section styles  */
+#about-me-section{
+    display: flex;
+    justify-content: space-between;
+    background: var(--primaryColor);
+    padding: 60px 0;
+}
+#about-me-section .left-side{
+    max-width: 50%;
+}
+#about-me-section .right-side{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+#about-me-section .rating-container{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-bottom: 20px;
+}
+h2{
+    color: var(--textColor);
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+#about-me-section .left-side h2{
+    text-transform: uppercase;
+}
+#about-me-section .right-side h2{
+    margin-bottom: 5px;
+}
+#about-me-section .right-side p{
+    color: var(--textColor);
+    font-size: 16px;
+}
+
+/* media queries  */
+
 @media only screen and (max-width: 1080px) and (min-width : 768px) {
     body>* {
         margin: 0 20px;
     }
-    #nav-section ul li {
+    #nav-section{
+        margin: 0;
+        padding: 0 20px;
+    }
+    #nav-section .nav-wrapper{
+        padding: 12px 0;
+    }
+    #nav-section .nav-wrapper ul li {
         font-size: 16px;
     }
     #banner-section{
         margin: 0;
-        padding-bottom: 100px;
+        padding-bottom: 150px;
     }
     #banner-section .container{
+        width: 97%;
         margin: 0 20px;
     }
     .container .intro h1{
         font-size: 32px;
     }
-    .container .skills span{
-        font-size: 18px;
+    #banner-section .container .skills span{
+        font-size: 16px;
     }
 }
 @media only screen and (max-width: 767px) {
@@ -268,35 +306,40 @@ a {
         margin: 0 12px;
     }
     #nav-section{
-        flex-direction: column;
+        margin: 0;
+        padding: 0 12px;
     }
-    #nav-section .logo-container{
+    #nav-section .nav-wrapper{
+        flex-direction: column;
+        padding-bottom: 6px;
+    }
+    #nav-section .nav-wrapper .logo-container{
         width: 100%;
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding: 8px 0;
     }
-        #nav-section .logo-container .cv-btn{
+        #nav-section .nav-wrapper .logo-container .cv-btn{
         display: block;
         padding: 8px 12px;
         background: var(--tertiaryColor);
         border-radius: 4px;
     }
-    #nav-section ul{
+    #nav-section .nav-wrapper ul{
         width: 100%;
         justify-content: start;
     }
-    #nav-section ul li {
+    #nav-section .nav-wrapper ul li {
         font-size: 16px;
         padding: 5px 8px;
         font-weight: 400;
         font-size: 12px;
     }
-    #nav-section ul li:first-child {
+    #nav-section .nav-wrapper ul li:first-child {
         padding-left: 0;
     }
-    #nav-section ul li:last-child {
+    #nav-section .nav-wrapper ul li:last-child {
         display: none;
     }
     #banner-section{
@@ -308,7 +351,7 @@ a {
         row-gap: 20px;
         margin: 0 12px;
         width: 95%;
-        padding-bottom: 80px;
+        padding-bottom: 100px;
     }
     #banner-section .container .intro h1{
         font-size: 28px;
@@ -316,7 +359,7 @@ a {
     #banner-section .container .intro h1 img{
         width: 24px; 
     }
-    #banner-section .container .intro .description{
+    .description{
         margin-bottom: 18px;
     }
     #banner-section .container .skills{
@@ -330,6 +373,7 @@ a {
         font-size: 14px;
     }
     #banner-section .marquee-wrapper{
+        bottom: 30px;
         padding: 20px 8px;
     }
     #banner-section .marquee-content{
@@ -340,5 +384,19 @@ a {
     }
     #banner-section .marquee-container img{
         width: 24px;
+    }
+    #about-me-section{
+        flex-direction: column;
+        padding: 40px 0;
+    }
+    #about-me-section .left-side{
+        max-width: 100%;
+    }
+    #about-me-section .right-side{
+        align-items: start;
+    }
+    h2{
+        font-size: 24px;
+        margin-bottom: 12px;
     }
 }
