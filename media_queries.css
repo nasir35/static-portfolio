@@ -27,13 +27,25 @@
         width: 97%;
         margin: 0 20px;
     }
-
-    .container .intro h1 {
-        font-size: 32px;
+    #banner-section .container .intro-left {
+        max-width: 50%;
     }
 
+    #banner-section .container .intro h1 {
+        font-size: 28px;
+    }
+    #banner-section .container .intro img {
+        width: 28px;
+    }
+
+    #banner-section .container .skills {
+        gap: 8px;
+    }
     #banner-section .container .skills span {
         font-size: 16px;
+    }
+    #banner-section .container .skills img {
+        width: 20px;
     }
     #experience-section{
         margin: 0;
@@ -42,6 +54,17 @@
     #awards-section{
         margin: 0;
         padding: 60px 20px;
+    }
+    #portfolio-section {
+        margin: 0;
+        padding: 60px 0;
+    }
+
+    #portfolio-section .container {
+        padding: 0 20px;
+    }
+    #portfolio-section .container .project-wrapper img {
+        max-width: 50%;
     }
     .form-container {
         width: 100%;
@@ -90,10 +113,9 @@
     }
 
     #nav-section .nav-wrapper ul li {
-        font-size: 16px;
         padding: 5px 8px;
         font-weight: 400;
-        font-size: 12px;
+        font-size: 14px;
     }
 
     #nav-section .nav-wrapper ul li:first-child {
@@ -198,14 +220,24 @@
 
     #awards-section {
         margin: 0;
-        padding: 50px 0;
+        padding: 40px 0;
     }
     #awards-section .container {
         padding: 0 12px;
     }
+    #awards-section .container .section-header {
+        margin-bottom: 32px;
+    }
+    #awards-section .container .section-header p {
+        font-size: 16px;
+        margin-bottom: 0;
+    }
     #awards-section .award-content {
             max-width: 100%;
             text-align: left;
+        }
+    #awards-section .award-content .description{
+            font-size: 16px;
         }
     #awards-section .awards-list {
         gap: 20px;
@@ -220,7 +252,27 @@
         margin-top: 10px;
         text-align: left;
     }
-
+    #portfolio-section{
+        padding: 40px 0;
+    }
+    #portfolio-section .container {
+        padding: 0 12px;
+    }
+    #portfolio-section .container .tab-container {
+        flex-wrap: wrap;
+    }
+    #portfolio-section .container .projects-container{
+        max-width: 100%;
+    }
+    #portfolio-section .container .project-wrapper {
+        flex-direction: column;
+    }
+    #portfolio-section .container .project-wrapper img{
+        max-width: 100%;
+    }
+    #portfolio-section .container .project-wrapper:last-child{
+        flex-direction: column-reverse;
+    }
     #contact-section{
         margin: 0;
         padding: 50px 0;
