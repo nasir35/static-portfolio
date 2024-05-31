@@ -43,6 +43,11 @@
         margin: 0;
         padding: 60px 20px;
     }
+    .form-container {
+        width: 100%;
+        max-width: 800px;
+        padding: 40px 60px;
+    }
 
     #footer-section{
         margin: 0;
@@ -214,8 +219,25 @@
     #awards-section .award-category {
         margin-top: 10px;
         text-align: left;
-        }
+    }
 
+    #contact-section{
+        margin: 0;
+        padding: 50px 0;
+    }
+    #contact-section .container{
+        padding: 0 12px;
+    }
+    .form-group {
+        flex-direction: column;
+    }
+    .custom-file-upload{
+        text-align: left;
+    }
+    .form-container{
+        width: 100%;
+        padding: 30px 20px ;
+    }
 
     #footer-section{
         margin: 0;
