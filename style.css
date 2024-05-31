@@ -461,6 +461,9 @@ h2{
     margin-bottom: 20px;
     color: var(--textColor);
 }
+#portfolio-section .container .project-wrapper .description{
+    line-height: 1.5rem;
+}
 
 
 
