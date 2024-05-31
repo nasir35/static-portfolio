@@ -43,6 +43,10 @@
         margin: 0;
         padding: 60px 20px;
     }
+
+    #footer-section{
+        margin: 0;
+    }
 }
 
 @media only screen and (max-width: 767px) {
@@ -211,4 +215,17 @@
         margin-top: 10px;
         text-align: left;
         }
+
+
+    #footer-section{
+        margin: 0;
+        padding: 50px 0;
+    }
+    #footer-section .container{
+        padding: 0 12px;
+    }
+    .footer-nav ul {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
 }

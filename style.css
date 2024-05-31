@@ -344,7 +344,7 @@ h2{
 
 /* award section  */
 #awards-section {
-    width: 100vw;
+    max-width: 100vw;
     padding: 70px 0px;
     background: var(--primaryColor);
 }
@@ -400,4 +400,71 @@ h2{
     font-weight: 500;
     color: var(--textColor);
     text-align: right;
+}
+
+
+/* footer styles  */
+#footer-section {
+    max-width: 100vw;
+    background: #000000;
+    padding: 40px 0;
+    text-align: center;
+}
+
+footer .container {
+    max-width: var(--maxWidth);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-logo h1 {
+    color: #ff6600;
+    margin-bottom: 20px;
+}
+
+.footer-nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.footer-nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+
+.footer-nav a:hover {
+    color: #ff6600;
+}
+
+.footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.footer-social a img {
+    width: 24px;
+    height: 24px;
+}
+
+.footer-bottom {
+    border-top: 1px solid #333;
+    margin-top: 20px;
+    padding-top: 20px;
+}
+
+.footer-bottom p {
+    color: #888;
+    font-size: 14px;
+}
+
+.footer-name {
+    color: #ff6600;
 }
